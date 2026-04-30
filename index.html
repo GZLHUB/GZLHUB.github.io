@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HiGzl | Personal Space</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Zilla+Slab:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f0f0f;
+            --card-bg: #1a1a1a;
+            --accent-color: #d4af37; /* 金色 */
+            --text-main: #e0e0e0;
+            --text-dim: #a0a0a0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* 导航栏 */
+        nav {
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-family: 'Zilla Slab', serif;
+            font-size: 1.8rem;
+            color: var(--accent-color);
+            letter-spacing: 2px;
+        }
+
+        /* Hero 区域 */
+        header {
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 1rem;
+        }
+
+        header h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #fff, var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p {
+            color: var(--text-dim);
+            font-size: 1.2rem;
+            max-width: 600px;
+        }
+
+        /* 内容主体 */
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem 5rem;
+        }
+
+        .section-title {
+            margin: 4rem 0 2rem;
+            font-size: 1.5rem;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 1rem;
+        }
+
+        /* 文章卡片 */
+        .post-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+
+        .post-card:hover {
+            transform: translateY(-5px);
+            border-color: #333;
+        }
+
+        .post-date {
+            font-size: 0.8rem;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .post-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .post-card p {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+        }
+
+        /* 关于我 / 社交链接 */
+        .footer {
+            text-align: center;
+            padding: 4rem 0;
+            border-top: 1px solid #222;
+            color: var(--text-dim);
+            font-size: 0.9rem;
+        }
+
+        .social-links {
+            margin-bottom: 1rem;
+        }
+
+        .social-links a {
+            color: var(--text-main);
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5rem; }
+            nav { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">HiGzl.</div>
+    <div class="nav-links">
+        <!-- 预留链接位置 -->
+    </div>
+</nav>
+
+<header>
+    <h1>你好，我是 HiGzl</h1>
+    <p>在这里记录思考、技术沉淀以及对生活的一点观察。</p>
+</header>
+
+<main>
+    <h2 class="section-title">最新发布</h2>
+
+    <article class="post-card">
+        <span class="post-date">2024.03.20</span>
+        <h3>构建极简主义的数字生活</h3>
+        <p>在这个信息过载的时代，如何通过工具优化和习惯养成，找回属于自己的专注力...</p>
+    </article>
+
+    <article class="post-card">
+        <span class="post-date">2024.02.15</span>
+        <h3>关于 CSS 现代布局的深度探索</h3>
+        <p>从 Grid 到容器查询，探讨前端布局在 2024 年的更多可能性和实战技巧...</p>
+    </article>
+
+    <article class="post-card">
+        <span class="post-date">2024.01.05</span>
+        <h3>HiGzl 的博客开张日志</h3>
+        <p>万事开头难，但这第一行代码已经敲下。欢迎来到我的个人频道。</p>
+    </article>
+
+    <h2 class="section-title">关于</h2>
+    <p style="color: var(--text-dim);">
+        HiGzl 是一名开发者/创意人。热爱简洁的代码与优雅的设计。
+        本站使用纯 HTML/CSS 构建，不含冗余的脚本，追求极致的加载速度。
+    </p>
+</main>
+
+<footer class="footer">
+    <div class="social-links">
+        <a href="#">Github</a>
+        <a href="#">Twitter</a>
+        <a href="#">Email</a>
+    </div>
+    <p>© 2024 HiGzl. Built with Passion.</p>
+</footer>
+
+</body>
+</html>
